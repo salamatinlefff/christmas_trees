@@ -66,10 +66,16 @@ button {
 }
 
 .container {
-  max-width: 129rem;
+  max-width: 137.4rem;
   margin: 0 auto;
+  padding: 0 4.2rem;
 }
 
 .hide {
   display: none;
+}
+
+@media (max-width: 1440px) {
+  .container {
+  }
 }

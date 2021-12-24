@@ -7,18 +7,9 @@
   font-display: swap;
 }
 
-:root {
-  --main-color: #ffffff;
-  --second-color: #262626;
-  --one-color: #00654e;
-  --two-color: #006e55;
-  --three-color: #005844;
-  --main-bg-color: #005844;
-  --second-bg-color: #c0b487;
-  --trigger-color: #e6ab39;
+html {
   box-sizing: border-box;
-  position: relative /* Теперь 1 rem = 10 px обыкновенных */;
-  font-size: 62.5%;
+  font-size: 62.5%; /* Теперь 1 rem = 10 px обыкновенных */
 }
 
 *,
@@ -82,12 +73,27 @@ button {
   display: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 @media (max-width: 1440px) {
   .container {
   }
 }
 
 @media (max-width: 1200px) {
+  .b-page_newyear {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 1000px) {

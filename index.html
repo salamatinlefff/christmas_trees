@@ -8,15 +8,29 @@
 
   <link rel="preload" href="./fonts/cormorant-v11-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin> <!-- делаем предзагрузку шрифта -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/default.css">
+  <style>
+    :root {
+  --main-color: #ffffff;
+  --second-color: #262626;
+  --one-color: #00654e;
+  --two-color: #006e55;
+  --three-color: #005844;
+  --main-bg-color: #005844;
+  --second-bg-color: #c0b487;
+  --trigger-color: #e6ab39;
+  --url-features-one: url("../img/tree.svg");
+  --url-features-two: url("../img/christmas-decorations.svg");
+  --url-features-three: url("../img/flowers.svg");
+  --url-features-four: url("../img/delivery-truck.svg");
+  }
+  </style>
+
   <link rel="stylesheet" href="css/index.css">
 
-  <link rel="stylesheet" href="ball/ball.css">
-  <script src="ball/ball.js"></script>
+  <!-- <link rel="stylesheet" href="ball/ball.css">
+  <script defer src="ball/ball.js"></script> -->
 </head>
 <body>
-
   <header class="header">
     <div class="container header__container">
       <svg class="header__logo logo" viewBox="0 0 164 76" role="img" aria-label="Логотип компании Christmas Trees">
@@ -74,12 +88,28 @@
 
     <section class="features">
       <div class="container">
-
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features__list">
+          <li class="features__item features__item-one">Пушистые и 
+            ароматные ёлочки</li>
+          <li class="features__item features__item-two">Набор ёлочных украшений в подарок</li>
+          <li class="features__item features__item-three">Ёлочки сохранят свежесть надолго</li>
+          <li class="features__item features__item-four">Доставим ёлочку за 
+            наш счет</li>
+        </ul>
       </div>
     </section>
 
     <section class="product" id="one">
       <div class="container">
+        <div class="product__content">
+          <h2 class="product__title"></h2>
+
+          <p class="product__features"></p>
+          <p class="product__description"></p>
+        </div>
+
+        <img class="product__picture" src="img/fraiser.jpg" alt="">
 
       </div>
     </section>
@@ -122,8 +152,6 @@
       </g>
       </symbol>
   </svg>
-
-  <script src="ball/ball.js" defer></script>  
 
   <div class="b-page_newyear">
     <div class="b-page__content">

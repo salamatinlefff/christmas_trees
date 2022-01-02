@@ -1,6 +1,7 @@
 .header {
   color: var(--second-color);
   padding: 2.7rem 0;
+  background-image: #aaa;
 }
 
 .header__container {

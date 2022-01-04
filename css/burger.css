@@ -1,15 +1,73 @@
 .burger {
   display: none;
+  position: relative;
+  --width: 2.1rem;
+  --height: 1.4rem;
+  --size-line: 0.2rem;
+  --color: #005844;
+  width: var(--width);
+  height: var(--height);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - (var(--size-line) / 2));
+  height: var(--size-line);
+  background-color: var(--color);
+  transition: transform 1s;
+}
+
+.burger__line::after,
+.burger__line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: var(--size-line);
+  background-color: var(--color);
+  transition: transform 0.3s;
+}
+
+.burger__line::before {
+  top: calc(((var(--height) / 2) - var(--height)) / 2 - var(--size-line));
+}
+
+.burger__line::after {
+  top: calc((var(--height) - var(--height) / 2) / 2 + var(--size-line));
+}
+
+.burger_active .burger__line {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+
+.burger_active .burger__line::before {
+  top: calc(50% - (var(--size-line) / 2));
+  transform: rotate(-45deg);
+}
+
+.burger_active .burger__line::after {
+  top: calc(50% - (var(--size-line) / 2));
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1000px) {
-}
-
-@media (max-width: 760px) {
   .burger {
     display: block;
   }
 }
 
+@media (max-width: 760px) {
+}
+
 @media (max-width: 580px) {
+  .burger {
+    --width: 1.8rem;
+    --height: 1.2rem;
+  }
 }

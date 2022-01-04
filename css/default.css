@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* Теперь 1 rem = 10 px обыкновенных */
+  scroll-behavior: smooth;
 }
 
 *,

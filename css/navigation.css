@@ -34,6 +34,14 @@
   color: var(--main-bg-color);
 }
 
+.navigation_hidden_opacity {
+  opacity: 0;
+}
+
+.navigation_visible_opacity {
+  opacity: 1;
+}
+
 @media (max-width: 1440px) {
   .navigation__list {
     gap: 2rem;
@@ -48,6 +56,7 @@
   .navigation {
     display: none;
     width: 100%;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .navigation_active {

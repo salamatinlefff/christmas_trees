@@ -5,6 +5,7 @@
   --height: 1.4rem;
   --size-line: 0.2rem;
   --color: #005844;
+  --time-transition: 0.5s;
   width: var(--width);
   height: var(--height);
   cursor: pointer;
@@ -19,7 +20,7 @@
   top: calc(50% - (var(--size-line) / 2));
   height: var(--size-line);
   background-color: var(--color);
-  transition: transform 1s;
+  transition: transform var(--time-transition);
 }
 
 .burger__line::after,
@@ -30,7 +31,6 @@
   right: 0;
   height: var(--size-line);
   background-color: var(--color);
-  transition: transform 0.3s;
 }
 
 .burger__line::before {
@@ -43,7 +43,7 @@
 
 .burger_active .burger__line {
   background-color: transparent;
-  transform: rotate(360deg);
+  transform: rotate(270deg);
 }
 
 .burger_active .burger__line::before {

@@ -7,7 +7,7 @@ const timer = () => {
   timerText.classList.add('timer__text');
   timerCount.classList.add('timer__count');
 
-  timerText.textContent = 'Блин блинский до нового года осталось: ';
+  timerText.textContent = 'До нового года осталось: ';
   timerCount.textContent = '1 день 16 часов 20 минут 11 секунд'
 
   timerText.append(timerCount);
